@@ -1,3 +1,5 @@
+QUOTE JOURNAL
+
 A simple and stylish web app to display random quotes, save your favorite ones, and view them anytime — built using HTML, CSS, and JavaScript (no frameworks needed!).
 
 ✨ Features
@@ -12,6 +14,7 @@ A simple and stylish web app to display random quotes, save your favorite ones, 
 🎨 Stylish and responsive UI
 
 📁 Files
+
 index.html – Main quote generator
 
 favorites.html – View saved favorite quotes
