@@ -1,0 +1,79 @@
+/* favorites.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fceabb, #ebcb74);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #f57c00;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.quotes-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.quote-card {
+  background: #fffbe6;
+  border: 1px solid #f9d976;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  color: #ff6f00;
+}
+
+button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+.empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}

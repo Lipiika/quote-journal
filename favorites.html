@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite Quotes</title>
+  <link rel="stylesheet" href="favorites.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Your Favorite Quotes</h1>
+    <div id="favorites-list" class="quotes-grid"></div>
+    <button onclick="goBack()">⏪ Back</button>
+  </div>
+
+  <script>
+    const favorites = JSON.parse(localStorage.getItem("favoriteQuotes")) || [];
+    const container = document.getElementById("favorites-list");
+
+    if (favorites.length === 0) {
+      container.innerHTML = "<p class='empty'>No favorite quotes yet 😢</p>";
+    } else {
+      favorites.forEach((quote, index) => {
+        const card = document.createElement("div");
+        card.classList.add("quote-card");
+
+        card.innerHTML = `
+          <p class="quote">“${quote.text}”</p>
+          <p class="author">— ${quote.author}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function goBack() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

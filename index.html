@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quote Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📖 Quote Journal</h1>
+
+    <div class="quote-box">
+      <p id="quote-text">Loading...</p>
+      <p id="quote-author"></p>
+    </div>
+
+    <div class="buttons">
+      <button onclick="generateQuote()">🔁 New Quote</button>
+      <button onclick="saveToFavorites()">❤️ Save</button>
+      <button onclick="viewFavorites()">⭐ View Favorites</button>
+    </div>
+  </div>
+  <div class="mode-toggle">
+  <button id="themeToggle">🌙 Dark Mode</button>
+</div>
+
+  <script>
+    const quotes = [
+      { text: "The best way to predict the future is to invent it.", author: "Alan Kay" },
+      { text: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+      { text: "Turn your wounds into wisdom.", author: "Oprah Winfrey" },
+      { text: "Do something today that your future self will thank you for.", author: "Unknown" },
+      { text: "Your time is limited, so don’t waste it living someone else’s life.", author: "Steve Jobs" },
+      { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+      { text: "Everything you can imagine is real.", author: "Pablo Picasso" },
+      { text: "Happiness is not something ready made. It comes from your own actions.", author: "Dalai Lama" },
+      { text: "Dream big and dare to fail.", author: "Norman Vaughan" }
+    ];
+
+    let currentQuote = {};
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      currentQuote = quotes[randomIndex];
+      document.getElementById("quote-text").textContent = `"${currentQuote.text}"`;
+      document.getElementById("quote-author").textContent = `— ${currentQuote.author}`;
+    }
+
+    function saveToFavorites() {
+      let favorites = JSON.parse(localStorage.getItem("favoriteQuotes")) || [];
+      const alreadyExists = favorites.some(
+        q => q.text === currentQuote.text && q.author === currentQuote.author
+      );
+
+      if (!alreadyExists) {
+        favorites.push(currentQuote);
+        localStorage.setItem("favoriteQuotes", JSON.stringify(favorites));
+        alert("Quote saved to favorites!");
+      } else {
+        alert("Already in favorites!");
+      }
+    }
+
+    function viewFavorites() {
+      window.location.href = "favorites.html";
+    }
+
+    // === Dark Mode Logic ===
+  const toggleBtn = document.getElementById("themeToggle");
+  const body = document.body;
+
+  function applyTheme(theme) {
+    body.className = theme;
+    toggleBtn.textContent = theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    const currentTheme = body.classList.contains("dark") ? "light" : "dark";
+    localStorage.setItem("theme", currentTheme);
+    applyTheme(currentTheme);
+  });
+
+  // On page load
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme);
+
+    window.onload = generateQuote;
+
+</script>
+</body>
+</html>
+

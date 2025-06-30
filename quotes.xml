@@ -1,0 +1,64 @@
+<!-- quotes.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<quotes>
+  <quote>
+    <text>Success is not final, failure is not fatal: It is the courage to continue that counts.</text>
+    <author>Winston Churchill</author>
+  </quote>
+  <quote>
+    <text>The only way to do great work is to love what you do.</text>
+    <author>Steve Jobs</author>
+  </quote>
+  <quote>
+    <text>Believe you can and you're halfway there.</text>
+    <author>Theodore Roosevelt</author>
+  </quote>
+  <quote>
+    <text>You miss 100% of the shots you don’t take.</text>
+    <author>Wayne Gretzky</author>
+  </quote>
+  <quote>
+    <text>Do not wait to strike till the iron is hot; but make it hot by striking.</text>
+    <author>William Butler Yeats</author>
+  </quote>
+  <quote>
+    <text>Everything you can imagine is real.</text>
+    <author>Pablo Picasso</author>
+  </quote>
+  <quote>
+    <text>Happiness is not something ready-made. It comes from your own actions.</text>
+    <author>Dalai Lama</author>
+  </quote>
+  <quote>
+    <text>If you want to lift yourself up, lift up someone else.</text>
+    <author>Booker T. Washington</author>
+  </quote>
+  <quote>
+    <text>The future belongs to those who believe in the beauty of their dreams.</text>
+    <author>Eleanor Roosevelt</author>
+  </quote>
+  <quote>
+    <text>We are what we repeatedly do. Excellence, then, is not an act, but a habit.</text>
+    <author>Aristotle</author>
+  </quote>
+  <quote>
+    <text>You only live once, but if you do it right, once is enough.</text>
+    <author>Mae West</author>
+  </quote>
+  <quote>
+    <text>It always seems impossible until it's done.</text>
+    <author>Nelson Mandela</author>
+  </quote>
+  <quote>
+    <text>Whether you think you can, or you think you can’t – you’re right.</text>
+    <author>Henry Ford</author>
+  </quote>
+  <quote>
+    <text>Your time is limited, don’t waste it living someone else’s life.</text>
+    <author>Steve Jobs</author>
+  </quote>
+  <quote>
+    <text>Don’t count the days, make the days count.</text>
+    <author>Muhammad Ali</author>
+  </quote>
+</quotes>
